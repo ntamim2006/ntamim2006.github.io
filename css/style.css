@@ -1,3 +1,40 @@
+
+
+
+
+
+
+.btn {
+	background-color: buttonface;
+}
+
+input[type=radio] {
+	display : none;
+}
+
+
+input:checked + .btn {
+    background-image: none;
+    outline: 0;
+    -webkit-box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+    box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+}
+input:checked + .btn.chosen-red{
+	background-color: #d9534f;
+}
+input:checked + .btn.chosen-green{
+	background-color: #0c0;
+}
+input:checked + .btn.chosen-blue{
+	background-color: lightblue;
+}
+
+input[type=submit]{
+	margin-top: 20px;
+}
+
+
+
 body{
   font: 15px/1.5  Ariel, Helvetica,sans-serif;
   
@@ -241,7 +278,6 @@ select {
   }
 
   .container2 img{
-    max-width: 40px;
     padding: 15px;
   }
   
@@ -249,3 +285,18 @@ select {
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

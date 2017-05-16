@@ -1,56 +1,65 @@
 <!DOCTYPE html>
-
-
-<html>
+<html dir="rtl">
 
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="Affordable and professional web design">
 	  <meta name="keywords" content="web design, affordable web design, professional web design">
-    <!-- <title>חתונה נדב ואדר</title> -->
-        <script src="demo.js">
-                  <title>parseURLParams(window.location.search)</title>
-
-        </script>
-
-
+    <title>חתונה נדב ואדר | Welcome</title>
     <link rel="icon" href="img/testring.png">
-    <link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link href="http://addtocalendar.com/atc/1.5/atc-style-blue.css" rel="stylesheet" type="text/css">
 
+	
+	
+	<script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+	<script>
+	    var config = {
+			apiKey: "AIzaSyAwB80M7gut7DWxTWNM96AdbTxoyvDopfg",
+			authDomain: "weddingcalc-ab3d4.firebaseapp.com",
+			databaseURL: "https://weddingcalc-ab3d4.firebaseio.com",
+			projectId: "weddingcalc-ab3d4",
+			storageBucket: "weddingcalc-ab3d4.appspot.com",
+			messagingSenderId: "731248230379"
+		};
+		firebase.initializeApp(config);
+		var database = firebase.database();
+	</script>
+	<script src="script.js"></script>
   </head>
 
   <body class="backgroundColor">
     <header align="center">
       <div  class="container">
         <div  id="branding">
-          <h1><span class="highlight">חתונה נדב ואדר</span></h1>
+          <h1><span class="highlight" id="eventName">חתונה</span></h1>
         </div>
       </div>
     </header>
 
     <section id="newsletter">
       <div class="container">
-        <!-- <h3 align="center">הנכם מוזמנים לחתונה של אדר ונדב שתתקיים בתאריך 11.6.17</h3> -->
-        <h3 align="center">האירוע יתקיים ביום א' 11.6.17 נשמח לראות</h3>
-        <h5 align="center">מספר הטלפון שלך הוא: 0503399503</h5>
+        <h3 align="center" id="eventDetails">האירוע יתקיים ביום א' 11.6.17 נשמח לראות</h3>
+        <!--<h5 align="center">מספר הטלפון שלך הוא: 0503399503</h5>-->
 
           <form align="center">
                    <!-- <input type="number" placeholder="הזן מספר מוזמנים"> -->
                    <div align="center" >
                        <select dir="rtl" onchange="if(this.value == '') this.selectedIndex = 1; ">
                           <option value="">בחר מספר נפשות</option>
-                          <option value="one">1</option>
-                          <option value="two">2</option>
-                          <option value="three">3</option>
-                          <option value="four">4</option>
-                          <option value="five">5</option>
-                          <option value="six">6</option>
-                          <option value="seven">7</option>
-                          <option value="eight">8</option>
-                          <option value="nine">9</option>
-                          <option value="ten">10</option>
-                          <option value="morethen10">יותר מעשר נפשות</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                          <option value="7">7</option>
+                          <option value="8">8</option>
+                          <option value="9">9</option>
+                          <option value="10">10</option>
+                          <option value="999">יותר מעשר נפשות</option>
                       </select>
                   </div>
         </form>
@@ -60,19 +69,53 @@
 
 
     <section id="news">
-      <div align="center" class="container2">
-       <form align="center">
-         <button type="submit" class="button_1">מגיע</button>
-          <button type="submit" class="button_2">לא מגיע</button>
-          <button type="submit" class="button_3">אולי</button>
+      <div class="container2">
+       <form class="row">
+			<input type="radio" name="attending" value="going" id="yes">
+			<label type="submit" class="btn col-xs-4 chosen-green" for="yes">מגיע</label>
+			<input type="radio" name="attending" value="not_going" id="no">
+			<label type="submit" class="btn col-xs-4 chosen-red" for="no">לא מגיע</label>
+			<input type="radio" name="attending" value="maybe" id="maybe">
+			<label type="submit" class="btn col-xs-4 chosen-blue" for="maybe">אולי</label>
         </form>
+		<input type="submit" class='btn btn-primary btn-block'/>
       </div>
     </section>
 
+	
+	
+	
+	
+	
+	
+	
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
     <section id="boxes">
       <div align="center" class="container2">
 
-          <img src="./img/calanderadd.png">
+          <!-- 3. Place event data -->
+			<span class="addtocalendar atc-style-link ">
+				<a class="atcb-link"><img src="./img/calanderadd.png"></a>
+				<var class="atc_event">
+					<var class="atc_date_start" id="event_start">2017-05-04 12:00:00</var>
+					<var class="atc_date_end">2017-05-04 18:00:00</var>
+					<var class="atc_timezone">Europe/London</var>
+					<var class="atc_title" id="event_title">Star Wars Day Party</var>
+					<var class="atc_description">May the force be with you</var>
+					<var class="atc_location">Tatooine</var>
+					<var class="atc_organizer">Luke Skywalker</var>
+					<var class="atc_organizer_email">luke@starwars.com</var>
+				</var>
+			</span>
           <img src="./img/map.png">
           <img src="./img/waze.png">
       </div>

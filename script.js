@@ -14,7 +14,8 @@
 			eventTitle: event.name,
 			eventDetails: event.event_details,
 			event_start: event.date,
-			event_title: event.name
+			event_title: event.name,
+			
 		};
 		
 		

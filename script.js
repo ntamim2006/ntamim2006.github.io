@@ -15,6 +15,7 @@
 			eventDetails: event.event_details,
 			event_start: event.date,
 			event_title: event.name,
+			event_place: event.place,
 			
 		};
 		

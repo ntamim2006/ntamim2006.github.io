@@ -11,6 +11,7 @@
 		
 		var htmlData = {
 			eventName: event.name,
+			eventTitle: event.name,
 			eventDetails: event.event_details,
 			event_start: event.date,
 			event_title: event.name

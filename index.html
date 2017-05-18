@@ -11,6 +11,7 @@
     <link rel="icon" href="img/testring.png">
 	<link rel="stylesheet" href="./css/style.css">
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="//cdn.rawgit.com/morteza/bootstrap-rtl/v3.3.4/dist/css/bootstrap-rtl.min.css">
 	<link href="https://addtocalendar.com/atc/1.5/atc-style-blue.css" rel="stylesheet" type="text/css">
 
 	
@@ -71,14 +72,20 @@
 
 
     <section id="news">
-      <div class="container2">
+      <div class="">
        <form class="row">
-			<input type="radio" name="attending" value="going" id="yes">
-			<label type="submit" class="btn col-xs-4 chosen-green" for="yes">מגיע</label>
-			<input type="radio" name="attending" value="not_going" id="no">
-			<label type="submit" class="btn col-xs-4 chosen-red" for="no">לא מגיע</label>
-			<input type="radio" name="attending" value="maybe" id="maybe">
-			<label type="submit" class="btn col-xs-4 chosen-blue" for="maybe">אולי</label>
+			<div class="col-xs-4">
+				<input type="radio" name="attending" value="going" id="yes">
+				<label type="submit" class="btn chosen-green btn-block" for="yes">מגיע</label>
+			</div>
+			<div class="col-xs-4">
+				<input type="radio" name="attending" value="not_going" id="no">
+				<label type="submit" class="btn chosen-red btn-block" for="no">לא מגיע</label>
+			</div>
+			<div class="col-xs-4">
+				<input type="radio" name="attending" value="maybe" id="maybe">
+				<label type="submit" class="btn chosen-blue btn-block" for="maybe">אולי</label>
+			</div>
         </form>
 		<input type="submit" class='btn btn-primary btn-block' value="שלח"/>
       </div>
@@ -118,8 +125,10 @@
 					<var class="atc_organizer_email">a@a.a</var>
 				</var>
 			</span>
-          <img src="./img/map.png">
-          <img src="./img/waze.png">
+          <img src="./img/map.png" onclick="myNavFunc()">
+          <a href="waze://?ll=&navigate=yes" title="נווט באמצעות Waze" id="wazeLink">
+			<img src="./img/waze.png">
+		  </a>
       </div>
     </section>
 

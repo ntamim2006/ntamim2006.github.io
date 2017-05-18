@@ -1,4 +1,7 @@
-﻿document.addEventListener("DOMContentLoaded", function(){
+﻿var latlng="";
+
+
+document.addEventListener("DOMContentLoaded", function(){
 	
 	var URLParams = {
 		event: findGetParameter("event"),
@@ -25,9 +28,9 @@
 		for(id in htmlData)
 			document.getElementById(id).innerHTML = htmlData[id];
 	  
+	    document.getElementById("wazeLink").href = "waze://?ll=" + event.latlng + "&navigate=yes"
 	  
-	  
-	  
+		latlng = event.latlng;
 		if (window.addtocalendar)if(typeof window.addtocalendar.start == "function")return;
             if (window.ifaddtocalendar == undefined) { window.ifaddtocalendar = 1;
                 var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
@@ -62,6 +65,15 @@
 
 
 
+function myNavFunc(){
+    // If it's an iPhone..
+    if( (navigator.platform.indexOf("iPhone") != -1) 
+        || (navigator.platform.indexOf("iPod") != -1)
+        || (navigator.platform.indexOf("iPad") != -1))
+         window.open("maps://maps.google.com/maps?daddr=" + latlng + "&amp;ll=");
+    else
+         window.open("http://maps.google.com/maps?daddr=" + latlng + "&amp;ll=");
+}
 
 
 function findGetParameter(parameterName) {

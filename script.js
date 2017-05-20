@@ -48,7 +48,8 @@ document.addEventListener("DOMContentLoaded", function(){
 			
 			database.ref('/users/' + URLParams.event + '/Invitations/sent_contacts/'+URLParams.guest+'/num_of_guests').set(numOfPeoples);
 			database.ref('/users/' + URLParams.event + '/Invitations/sent_contacts/'+URLParams.guest+'/arrive_state').set(attend);
-			
+						alert("תודה רבה, תשובתך נשלחה");
+
 			
 			
 		}else{

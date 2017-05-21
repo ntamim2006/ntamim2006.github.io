@@ -13,7 +13,7 @@
 
 #news{
 	
-	width: 70%;
+	width: 100%;
 	margin: auto;
 	
 }
@@ -46,7 +46,7 @@ input:checked + .btn.chosen-blue{
 }
 
 input[type=submit]{
-	margin-top: 20px;
+	margin-top: 12px;
 }
 
 .container2 span img {
@@ -119,7 +119,7 @@ body{
 header{
   background:#E6E6FA;
   color:#ffffff;
-  padding-top: 10px; 
+  padding-top: 10px;
   min-height:40px;
   border-bottom:#ab4adb 3px solid;
 }
@@ -164,7 +164,16 @@ header a:hover{
   font-weight:bold;
 }
 
+#hhh{
+  color:#ab4adb;
+  background:#E6E6FA;
+padding-left:20px;
+padding-right:20px;
+}
 
+#hhh h4{
+	color:#333;
+}
 
 /* Newsletter */
 #newsletter{
@@ -189,10 +198,12 @@ header a:hover{
 }
 
 #newsletter select{
-  height: 30px
+  height: 30px;
 }
 
-
+#newsletter form select{
+	min-width:100%
+}
 
 /* Boxes */
 #boxes{

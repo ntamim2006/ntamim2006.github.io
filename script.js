@@ -47,6 +47,8 @@ document.addEventListener("DOMContentLoaded", function(){
 		if(event2.arrive_state == "not_going"){
 		alert(event_state +" "+event_numofguest);
 
+		}else if(event2.arrive_state == "going"){
+		alert("dfsdsf");
 		}
 // 		var htmlData2 = {
 // 			event_arrive_state: event2.arrive_state,

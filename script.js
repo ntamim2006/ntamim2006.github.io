@@ -44,7 +44,10 @@ document.addEventListener("DOMContentLoaded", function(){
 		var event2 = snapshot.val();
 		event_state = event2.arrive_state;
 		event_numofguest = event2.num_of_guests;
+		if(event2.arrive_state == "not_going"){
 		alert(event_state +" "+event_numofguest);
+
+		}
 // 		var htmlData2 = {
 // 			event_arrive_state: event2.arrive_state,
 // 			event_numofguest: event2.num_of_guests,

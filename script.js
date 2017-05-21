@@ -1,5 +1,6 @@
 ﻿var latlng="";
 var event_state="";
+var event_numofguest;
 document.addEventListener("DOMContentLoaded", function(){
 	
 	var URLParams = {
@@ -42,7 +43,8 @@ document.addEventListener("DOMContentLoaded", function(){
 	database.ref('/users/' + URLParams.event + '/Invitations/sent_contacts/'+URLParams.guest).once('value').then(function(snapshot) {
 		var event2 = snapshot.val();
 		event_state = event2.arrive_state;
-		alert(event_state);
+		event_numofguest = event2.num_of_guests;
+		alert(event_state +" "+event_numofguest);
 // 		var htmlData2 = {
 // 			event_arrive_state: event2.arrive_state,
 // 			event_numofguest: event2.num_of_guests,

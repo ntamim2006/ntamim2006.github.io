@@ -42,10 +42,15 @@ document.addEventListener("DOMContentLoaded", function(){
 	database.ref('/users/' + URLParams.event + '/Invitations/sent_contacts/'+URLParams.guest).once('value').then(function(snapshot) {
 		var event = snapshot.val();
 		
+		var htmlData2 = {
+			event_arrive_state: event.arrive_state,
+			event_numofguest: event.num_of_guests,
+			
+		};
 		
-			event_state: event.arrive_state;
-			alert(event_state);
-// 			event_numofguest: event.num_of_guests,
+		
+		for(id in htmlData2)
+			document.getElementById(id).innerHTML = htmlData2[id];
 		
 	});
 	

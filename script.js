@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function(){
 			eventDetails: event.event_details,
 			event_start: event.date + " 00:00:00",
 			event_end: event.date + "24:00:00",
-			event_time: event.date + "תאריך החתונה:",
+			event_time: "תאריך החתונה: " + event.date ,
 			event_title: event.name,
 			event_place: event.place,
 			

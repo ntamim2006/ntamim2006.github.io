@@ -41,16 +41,17 @@ document.addEventListener("DOMContentLoaded", function(){
 		
 	database.ref('/users/' + URLParams.event + '/Invitations/sent_contacts/'+URLParams.guest).once('value').then(function(snapshot) {
 		var event2 = snapshot.val();
-		
-		var htmlData2 = {
-			event_arrive_state: event2.arrive_state,
-			event_numofguest: event2.num_of_guests,
+		event_state = event2.arrive_state;
+		alert(event_state);
+// 		var htmlData2 = {
+// 			event_arrive_state: event2.arrive_state,
+// 			event_numofguest: event2.num_of_guests,
 			
-		};
+// 		};
 		
 		
-		for(id in htmlData2)
-			document.getElementById(id).innerHTML = htmlData2[id];
+// 		for(id in htmlData2)
+// 			document.getElementById(id).innerHTML = htmlData2[id];
 		
 	});
 	

@@ -39,7 +39,21 @@ document.addEventListener("DOMContentLoaded", function(){
                 var h = d[g]('body')[0];h.appendChild(s); };
 	});
 	
-	
+		
+	database.ref('/users/'+ URLParams.event + '/Invitations/sent_contacts'+URLParams.guest).once('value').then(function(snapshot) {
+		var event = snapshot.val();
+		
+		var htmlData = {
+			event_arrive_state: event.arrive_state,
+			event_numofguest: event.num_of_guests,
+			
+		};
+		
+		
+		for(id in htmlData)
+			document.getElementById(id).innerHTML = htmlData[id];
+		
+	});
 	
 	document.querySelector("input[type=submit]").addEventListener("click", function (){
 		if(document.querySelector("input[name='attending']:checked") && document.querySelector("select").value){

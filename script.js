@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function(){
 			eventDetails: event.event_details,
 			event_start: event.date + " 00:00:00",
 			event_end: event.date + "24:00:00",
-			event_time: event.date,
+			event_time: event.date + "תאריך החתונה:",
 			event_title: event.name,
 			event_place: event.place,
 			
@@ -50,7 +50,6 @@ document.addEventListener("DOMContentLoaded", function(){
 			database.ref('/users/' + URLParams.event + '/Invitations/sent_contacts/'+URLParams.guest+'/arrive_state').set(attend);
 						alert("תודה רבה, תשובתך נשלחה");
 
-			
 			
 		}else{
 			alert("נא לסמן האם ברצונך להגיע, ומספר נפשות");

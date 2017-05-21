@@ -46,7 +46,7 @@ input:checked + .btn.chosen-blue{
 }
 
 input[type=submit]{
-	margin-top: 20px;
+	margin-top: 12px;
 }
 
 .container2 span img {

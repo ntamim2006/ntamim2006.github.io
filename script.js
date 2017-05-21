@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function(){
 	});
 	
 		
-	database.ref('/users/'+ URLParams.event + '/Invitations/sent_contacts'+URLParams.guest).once('value').then(function(snapshot) {
+	database.ref('/users/' + URLParams.event + '/Invitations/sent_contacts/'+URLParams.guest).once('value').then(function(snapshot) {
 		var event = snapshot.val();
 		
 		var htmlData = {

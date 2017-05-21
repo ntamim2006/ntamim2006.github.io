@@ -1,6 +1,5 @@
 ﻿var latlng="";
-
-
+var event_state="";
 document.addEventListener("DOMContentLoaded", function(){
 	
 	var URLParams = {
@@ -43,15 +42,10 @@ document.addEventListener("DOMContentLoaded", function(){
 	database.ref('/users/' + URLParams.event + '/Invitations/sent_contacts/'+URLParams.guest).once('value').then(function(snapshot) {
 		var event = snapshot.val();
 		
-		var htmlData = {
-			event_arrive_state: event.arrive_state,
-			event_numofguest: event.num_of_guests,
-			
-		};
 		
-		
-		for(id in htmlData)
-			document.getElementById(id).innerHTML = htmlData[id];
+			event_state: event.arrive_state;
+			alert(event_state);
+// 			event_numofguest: event.num_of_guests,
 		
 	});
 	

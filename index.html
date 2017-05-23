@@ -1,21 +1,14 @@
-<!DOCTYPE html>
-<html dir="rtl">
+<html>
+    <head>
+        <link href="./img/favicon.png" rel="shortcut icon"/>
+        <meta charset="utf-8"/>
+        <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0" name="viewport"/>
+        <link href="./css/mainArtboard.css" rel="stylesheet" type="text/css"/>
+        <meta content="Launchpad by Anima" name="author">
+        </meta>
+			<link href="https://addtocalendar.com/atc/1.5/atc-style-blue.css" rel="stylesheet" type="text/css">
 
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <meta name="description" content="Affordable and professional web design">
-	  <meta name="keywords" content="web design, affordable web design, professional web design">
-
-    <title id="eventTitle">טוען...</title>
-    <link rel="icon" href="img/testring.png">
-	<link rel="stylesheet" href="./css/style.css">
-	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<link href="https://addtocalendar.com/atc/1.5/atc-style-blue.css" rel="stylesheet" type="text/css">
-
-	
-	
-	<script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+			<script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
 	<script>
 	    var config = {
 			apiKey: "AIzaSyAwB80M7gut7DWxTWNM96AdbTxoyvDopfg",
@@ -29,120 +22,55 @@
 		var database = firebase.database();
 	</script>
 	<script src="script.js"></script>
-
-  </head>
-
-  <body class="backgroundColor">
-    <header align="center">
-      <div  class="container">
-        <div  id="branding">
-          <h1><span class="highlight" id="eventName">טוען אירוע...</span></h1>
-        </div>
-      </div>
-    </header>
-
-	  
-	  
-    	<section id="hhh">
-
-			<h4 align="center" id="eventDetails"></h4>
-      			 <h5 align="center" id="event_time"></h5>
-	</section> 
-
-    <section id="newsletter">
-      <div class="container">
-
-
-	     	     <section id="news">
-      <div class="">
-
-			<div class="col-xs-4">
-				<input type="radio" name="attending" value="going" id="yes">
-				<label type="submit" class="btn chosen-green btn-block" for="yes">מגיע</label>
-			</div>
-			<div class="col-xs-4">
-				<input type="radio" name="attending" value="not_going" id="no">
-				<label type="submit" class="btn chosen-red btn-block" for="no">לא מגיע</label>
-			</div>
-			<div class="col-xs-4">
-				<input type="radio" name="attending" value="maybe" id="maybe">
-				<label type="submit" class="btn chosen-blue btn-block" for="maybe">אולי</label>
-			</div>
-       <form class="row">
-
+    </head>
+    <body style="margin: 0">
+        <form action="form1" class="main-artboard" method="post" name="form1">
+            <div style="width: 320px; height: 100%; position:relative; margin:auto;">
+                <img class="rsvptabnot" src="./img/main artboardrsvptabnot@2x.png"/>
+                <img class="rsvp-tab-maybe" src="./img/main artboardrsvptab maybe@2x.png"/>
+                <img class="rsvptabcoming" src="./img/main artboardrsvptabcoming@2x.png"/>
+                <div class="copy">
+                    מגיע
+                </div>
+                <div class="label1">
+                    אולי
+                </div>
+                <div class="label2">
+                    לא מגיע
+                </div>
+                <div class="label3">
+                    הנכם מוזמנים לחתונה של נדב ואדר
+                    <br/>
+                    שתתקיים באולמי “שמיים כחולים” ברחובות
+                    <br/>
+                    בתאריך 11.6.17
+                    <br/>
+                    <br/>
+                    <br/>
+                </div>
+                <img class="flower-png" src="./img/main artboardflower png@2x.png"/>
+                <div class="label4" >
+                    אדר ונדב
+                    <br/>
+                    מתחתנים 
+                </div>
+                <img class="how-many-tab" src="./img/main artboardhow manytab@2x.png"/>
+                <input class="text2" name="text2" placeholder="2"/>
+                <a href="#" onclick="document.getElementsByName('form1')[0].submit();">
+                    <img class="submit-bottun" src="./img/main artboardsubmit bottun@2x.png"/>
+                </a>
+                <div class="label5">
+                    :אנא אשרו הגעתכם
+                    <br/>
+                </div>
+                <div class="footericons">
+                    <img class="waze-o"  src="./img/main artboardwaze o@2x.png" id="wazeLink"/>
+                    <img class="map-o"  src="./img/main artboardmap o@2x.png" onclick="myNavFunc()"/>
+                    <img class="calander-o" src="./img/main artboardcalander o@2x.png"/>
+                </div>
+            </div>
         </form>
-		
-      </div>
-    </section> 
-	      
-          <form align="center">
-                   <!-- <input type="number" placeholder="הזן מספר מוזמנים"> -->
-                   <div align="center" >
-                       <select dir="rtl" onchange="if(this.value == '') this.selectedIndex = 1; ">
-                          <option value="">בחר מספר נפשות</option>
-                          <option value="1">1</option>
-                          <option value="2">2</option>
-                          <option value="3">3</option>
-                          <option value="4">4</option>
-                          <option value="5">5</option>
-                          <option value="6">6</option>
-                          <option value="7">7</option>
-                          <option value="8">8</option>
-                          <option value="9">9</option>
-                          <option value="10">10</option>
-                          <option value="999">יותר מעשר נפשות</option>
-                      </select>
-                  </div>
-        </form>
-	      <input type="submit" class='btn btn-primary btn-block' value="שלח תשובה"/>
-      </div>
-       
-    </section>
-
-
- 
-
-	
-	
-	
-	
-	
-	
-	
-
-    
-	
-	
-	
-	
-	
-	
-	
-	
-    <section id="boxes">
-      <div align="center" class="container2">
-
-          <!-- 3. Place event data -->
-			<span class="addtocalendar atc-style-link ">
-				<a class="atcb-link"><img src="./img/calanderadd.png"></a>
-				<var class="atc_event">
-					<var class="atc_date_start" id="event_start"></var>
-					<var class="atc_date_end" id="event_end"></var>
-					<var class="atc_timezone">Asia/Jerusalem</var>
-					<var class="atc_title" id="event_title"></var>
-					<var class="atc_description"></var>
-					<var class="atc_location" id="event_place"></var>
-					<var class="atc_organizer"></var>
-					<var class="atc_organizer_email">a@a.a</var>
-				</var>
-			</span>
-          <img src="./img/map.png" onclick="myNavFunc()">
-          <a href="waze://?ll=&navigate=yes" title="נווט באמצעות Waze" id="wazeLink">
-			<img src="./img/waze.png">
-		  </a>
-      </div>
-    </section>
-
-
-  </body>
+        <script async="" defer="" src="launchpad-js/launchpad-banner.js">
+        </script>
+    </body>
 </html>

@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik');
+
+
+.main-artboard {
+  width               : 100%;
+  min-width           : 320px;
+  height              : 100%;
+  min-height          : 568px;
+  position            : relative;
+  overflow            : hidden;
+  margin              : 0px;
+  background          : rgba(255, 255, 255, 1.0);
+}
+a {
+  text-decoration     : none;
+}
+div {
+  -webkit-text-size-adjust: none;
+}
+.main-artboard .rsvptabnot {
+  background          : rgba(255, 255, 255, 0.0);
+  top                 : 325px;
+  height              : 40px;
+  width               : 238px;
+  position            : absolute;
+  margin              : 0;
+  left                : 41px;
+  opacity             : 0.0;
+}
+.main-artboard .rsvp-tab-maybe {
+  background          : rgba(255, 255, 255, 0.0);
+  top                 : 325px;
+  height              : 40px;
+  width               : 238px;
+  position            : absolute;
+  margin              : 0;
+  left                : 41px;
+  opacity             : 0.0;
+}
+.main-artboard .rsvptabcoming {
+  background          : rgba(255, 255, 255, 0.0);
+  top                 : 325px;
+  height              : 40px;
+  width               : 238px;
+  position            : absolute;
+  margin              : 0;
+  left                : 41px;
+}
+.main-artboard .copy {
+  background          : rgba(255, 255, 255, 0.0);
+  top                 : 337px;
+  height              : auto;
+  width               : auto;
+  position            : absolute;
+  margin              : 0;
+  left                : 222px;
+  font-family         : "Rubik", Helvetica, Arial, serif;
+  font-weight         : 500;
+  font-style          : normal;
+  font-size           : 14.0px;
+  color               : rgba(81, 81, 81, 1.0);
+  text-align          : center;
+  letter-spacing      : 1.09px;
+  line-height         : 17.0px;
+}
+.main-artboard .label1 {
+  background          : rgba(255, 255, 255, 0.0);
+  top                 : 337px;
+  height              : auto;
+  width               : auto;
+  position            : absolute;
+  margin              : 0;
+  left                : 146px;
+  font-family         : "Rubik", Helvetica, Arial, serif;
+  font-weight         : 500;
+  font-style          : normal;
+  font-size           : 14.0px;
+  color               : rgba(81, 81, 81, 1.0);
+  text-align          : center;
+  letter-spacing      : 1.09px;
+  line-height         : 17.0px;
+}
+.main-artboard .label2 {
+  background          : rgba(255, 255, 255, 0.0);
+  top                 : 337px;
+  height              : auto;
+  width               : auto;
+  position            : absolute;
+  margin              : 0;
+  left                : 53px;
+  font-family         : "Rubik", Helvetica, Arial, serif;
+  font-weight         : 500;
+  font-style          : normal;
+  font-size           : 14.0px;
+  color               : rgba(81, 81, 81, 1.0);
+  text-align          : center;
+  letter-spacing      : 1.09px;
+  line-height         : 17.0px;
+}
+.main-artboard .label3 {
+  background          : rgba(255, 255, 255, 0.0);
+  top                 : 212px;
+  min-width           : 296px;
+  height              : auto;
+  width               : auto;
+  position            : absolute;
+  margin              : 0;
+  left                : 12px;
+  font-family         : "Rubik", Helvetica, Arial, serif;
+  font-weight         : 400;
+  font-style          : normal;
+  font-size           : 14.0px;
+  color               : rgba(81, 81, 81, 1.0);
+  text-align          : center;
+  letter-spacing      : 1.09px;
+  line-height         : 20.0px;
+}
+.main-artboard .flower-png {
+  background          : rgba(255, 255, 255, 0.0);
+  top                 : 21px;
+  height              : 174px;
+  width               : 174px;
+  position            : absolute;
+  margin              : 0;
+  left                : 72px;
+}
+.main-artboard .label4 {
+  background          : rgba(255, 255, 255, 0.0);
+  top                 : 87px;
+  height              : auto;
+  width               : auto;
+  position            : absolute;
+  margin              : 0;
+  left                : 120px;
+  font-family         : "Rubik", Helvetica, Arial, serif;
+  font-weight         : 400;
+  font-style          : normal;
+  font-size           : 18.0px;
+  color               : rgba(81, 81, 81, 1.0);
+  text-align          : center;
+  letter-spacing      : 1.56px;
+  line-height         : 22.0px;
+}
+.main-artboard .how-many-tab {
+  background          : rgba(255, 255, 255, 0.0);
+  top                 : 385px;
+  height              : 40px;
+  width               : 238px;
+  position            : absolute;
+  margin              : 0;
+  left                : 41px;
+}
+.main-artboard .text2 {
+  background          : rgba(255, 255, 255, 0.0);
+  top                 : 390px;
+  height              : 30px;
+  width               : 187px;
+  position            : absolute;
+  margin              : 0;
+  left                : 82px;
+  font-family         : "Rubik", Helvetica, Arial, serif;
+  font-weight         : 500;
+  font-style          : normal;
+  font-size           : 14.0px;
+  color               : rgba(81, 81, 81, 1.0);
+  text-align          : right;
+  line-height         : 17.0px;
+  border              : 0;
+}
+.main-artboard .text2::placeholder {
+  color               : rgba(81, 81, 81, 0.6);
+}
+.main-artboard .submit-bottun {
+  background          : rgba(255, 255, 255, 0.0);
+  top                 : 445px;
+  height              : 40px;
+  width               : 120px;
+  position            : absolute;
+  margin              : 0;
+  left                : 100px;
+}
+.main-artboard .label5 {
+  background          : rgba(255, 255, 255, 0.0);
+  top                 : 288px;
+  height              : auto;
+  width               : auto;
+  position            : absolute;
+  margin              : 0;
+  left                : 94px;
+  font-family         : "Rubik", Helvetica, Arial, serif;
+  font-weight         : 500;
+  font-style          : normal;
+  font-size           : 14.0px;
+  color               : rgba(81, 81, 81, 1.0);
+  text-align          : center;
+  letter-spacing      : 1.09px;
+  line-height         : 20.0px;
+}
+.main-artboard .footericons {
+  /* Flexbox */
+  display: flex;
+  justify-content     : flex-start;
+  flex-direction      : row;
+  align-items         : center;
+  background          : rgba(255, 255, 255, 0.0);
+  top                 : 512px;
+  height              : 46px;
+  width               : auto;
+  position            : absolute;
+  margin              : 0;
+  left                : 71px;
+}
+.main-artboard .footericons .waze-o {
+  background          : rgba(255, 255, 255, 0.0);
+  position            : relative;
+  height              : 48px;
+  margin              : 0;
+  width               : 48px;
+}
+.main-artboard .footericons .map-o {
+  background          : rgba(255, 255, 255, 0.0);
+  position            : relative;
+  height              : 48px;
+  margin              : 0 0 0 20px;
+  width               : 48px;
+}
+.main-artboard .footericons .calander-o {
+  background          : rgba(255, 255, 255, 0.0);
+  position            : relative;
+  height              : 48px;
+  margin              : 0 0 0 20px;
+  width               : 48px;
+}

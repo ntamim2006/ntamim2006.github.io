@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik');
+
+
+.thank-you-artboard {
+  width               : 100%;
+  min-width           : 320px;
+  height              : 100%;
+  min-height          : 568px;
+  position            : relative;
+  overflow            : hidden;
+  margin              : 0px;
+  background          : rgba(255, 255, 255, 1.0);
+}
+a {
+  text-decoration     : none;
+}
+div {
+  -webkit-text-size-adjust: none;
+}
+.thank-you-artboard .footericons {
+  /* Flexbox */
+  display: flex;
+  justify-content     : flex-start;
+  flex-direction      : row;
+  align-items         : center;
+  background          : rgba(255, 255, 255, 0.0);
+  top                 : 457px;
+  height              : 46px;
+  width               : auto;
+  position            : absolute;
+  margin              : 0;
+  left                : 66px;
+}
+.thank-you-artboard .footericons .waze-o {
+  background          : rgba(255, 255, 255, 0.0);
+  position            : relative;
+  height              : 48px;
+  margin              : 0;
+  width               : 48px;
+}
+.thank-you-artboard .footericons .map-o {
+  background          : rgba(255, 255, 255, 0.0);
+  position            : relative;
+  height              : 48px;
+  margin              : 0 0 0 25px;
+  width               : 48px;
+}
+.thank-you-artboard .footericons .calander-o {
+  background          : rgba(255, 255, 255, 0.0);
+  position            : relative;
+  height              : 48px;
+  margin              : 0 0 0 25px;
+  width               : 48px;
+}
+.thank-you-artboard .background {
+  background          : rgba(255, 255, 255, 0.0);
+  top                 : 0px;
+  height              : 434px;
+  width               : 500px;
+  position            : absolute;
+  margin              : 0;
+  left                : -90px;
+}
+.thank-you-artboard .label1 {
+  background          : rgba(255, 255, 255, 0.0);
+  top                 : 266px;
+  height              : auto;
+  width               : auto;
+  position            : absolute;
+  margin              : 0;
+  left                : 96px;
+  font-family         : "Rubik", Helvetica, Arial, serif;
+  font-weight         : 500;
+  font-style          : normal;
+  font-size           : 27.0px;
+  color               : rgba(255, 255, 255, 1.0);
+  text-align          : center;
+  letter-spacing      : 1.1px;
+  line-height         : 32.0px;
+}

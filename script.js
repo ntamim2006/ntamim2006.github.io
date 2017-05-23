@@ -25,9 +25,8 @@ document.addEventListener("DOMContentLoaded", function(){
 		};
 		
 		
-		for(id in htmlData)
-			document.getElementById(id).innerHTML = htmlData[id];
-	  
+		//for(id in htmlData)
+		//	document.getElementById(id).innerHTML = htmlData[id];
 	    document.getElementById("wazeLink").href = "waze://?ll=" + event.latlng + "&navigate=yes"
 	  
 		latlng = event.latlng;
@@ -40,10 +39,10 @@ document.addEventListener("DOMContentLoaded", function(){
 	});
 	
 		
-	database.ref('/users/' + URLParams.event + '/Invitations/sent_contacts/'+URLParams.guest).once('value').then(function(snapshot) {
-		var event2 = snapshot.val();
-		event_state = event2.arrive_state;
-		event_numofguest = event2.num_of_guests;
+	//database.ref('/users/' + URLParams.event + '/Invitations/sent_contacts/'+URLParams.guest).once('value').then(function(snapshot) {
+	//	var event2 = snapshot.val();
+	//	event_state = event2.arrive_state;
+	//	event_numofguest = event2.num_of_guests;
 // 		if(event2.arrive_state == "not_going"){
 // 		alert(event_state +" "+event_numofguest);
 		
@@ -62,24 +61,25 @@ document.addEventListener("DOMContentLoaded", function(){
 // 		for(id in htmlData2)
 // 			document.getElementById(id).innerHTML = htmlData2[id];
 		
-	});
+	//});
 	
-	document.querySelector("input[type=submit]").addEventListener("click", function (){
-		if(document.querySelector("input[name='attending']:checked") && document.querySelector("select").value){
-			var attend = document.querySelector("input[name='attending']:checked").value;
-			var numOfPeoples = document.querySelector("select").value;
+	
+	//document.querySelector("input[type=submit]").addEventListener("click", function (){
+		//if(document.querySelector("input[name='attending']:checked") && document.querySelector("select").value){
+		//	var attend = document.querySelector("input[name='attending']:checked").value;
+//			var numOfPeoples = document.querySelector("select").value;
 			
-			database.ref('/users/' + URLParams.event + '/Invitations/sent_contacts/'+URLParams.guest+'/num_of_guests').set(numOfPeoples);
-			database.ref('/users/' + URLParams.event + '/Invitations/sent_contacts/'+URLParams.guest+'/arrive_state').set(attend);
-						alert("תודה רבה, תשובתך נשלחה");
+		//	database.ref('/users/' + URLParams.event + '/Invitations/sent_contacts/'+URLParams.guest+'/num_of_guests').set(numOfPeoples);
+		//	database.ref('/users/' + URLParams.event + '/Invitations/sent_contacts/'+URLParams.guest+'/arrive_state').set(attend);
+		//				alert("תודה רבה, תשובתך נשלחה");
 
 			
-		}else{
-			alert("נא לסמן האם ברצונך להגיע, ומספר נפשות");
-		}
+		//}else{
+		//	alert("נא לסמן האם ברצונך להגיע, ומספר נפשות");
+		//}
 		
 		
-	});
+	//});
 	
 	
 	

@@ -25,8 +25,8 @@ document.addEventListener("DOMContentLoaded", function(){
 		};
 		
 		
-		//for(id in htmlData)
-		//	document.getElementById(id).innerHTML = htmlData[id];
+		for(id in htmlData)
+			document.getElementById(id).innerHTML = htmlData[id];
 	    document.getElementById("wazeLink").href = "waze://?ll=" + event.latlng + "&navigate=yes"
 	  
 		latlng = event.latlng;

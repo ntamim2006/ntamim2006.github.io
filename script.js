@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function(){
 			//event_time: "תאריך החתונה: " + event.date ,
 			event_title: event.name,
 			event_place: event.place,
-			
+			//dsfsf
 		};
 		
 		

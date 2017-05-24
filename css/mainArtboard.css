@@ -5,7 +5,8 @@
   width               : 100%;
   min-width           : 320px;
   height              : 100%;
-  min-height          : 568px;
+  /*min-height          : 568px;*/
+  min-height          : 650px;
   position            : relative;
   overflow            : hidden;
   margin              : 0px;
@@ -141,7 +142,6 @@ div {
   font-style          : normal;
   font-size           : 18.0px;
   color               : rgba(81, 81, 81, 1.0);
-  text-align          : center;
   letter-spacing      : 1.56px;
   line-height         : 22.0px;
 }

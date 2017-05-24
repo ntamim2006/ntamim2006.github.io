@@ -42,29 +42,29 @@ document.addEventListener("DOMContentLoaded", function(){
 	});
 	
 		
-	//database.ref('/users/' + URLParams.event + '/Invitations/sent_contacts/'+URLParams.guest).once('value').then(function(snapshot) {
-	//	var event2 = snapshot.val();
-	//	event_state = event2.arrive_state;
-	//	event_numofguest = event2.num_of_guests;
-// 		if(event2.arrive_state == "not_going"){
+	database.ref('/users/' + URLParams.event + '/Invitations/sent_contacts/'+URLParams.guest).once('value').then(function(snapshot) {
+		var event2 = snapshot.val();
+		event_state = event2.arrive_state;
+		event_numofguest = event2.num_of_guests;
+		if(event2.arrive_state == "not_going"){
 // 		alert(event_state +" "+event_numofguest);
-		
-// 		}else if(event2.arrive_state == "going"){
+		not_going_click();
+		}else if(event2.arrive_state == "going"){
+			going_click();
 // 		alert("going");
-// 		}else{
+		}else{
+			maybe_click();
 // 		alert("maybe");
-// 		}
-// 		var htmlData2 = {
-// 			event_arrive_state: event2.arrive_state,
-// 			event_numofguest: event2.num_of_guests,
+		}
+		var htmlData2 = {
+			event_arrive_state: event2.arrive_state,
+			event_numofguest: event2.num_of_guests,
 			
-// 		};
+		};
 		
+	
 		
-// 		for(id in htmlData2)
-// 			document.getElementById(id).innerHTML = htmlData2[id];
-		
-	//});
+	});
 	
 	
 	//document.querySelector("input[type=submit]").addEventListener("click", function (){

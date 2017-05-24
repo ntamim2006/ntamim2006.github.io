@@ -99,6 +99,24 @@ function myNavFunc(){
          window.open("http://maps.google.com/maps?daddr=" + latlng + "&amp;ll=");
 }
 
+function not_going_click(){
+		document.getElementById('maybe').style.opacity = '0';    
+    	document.getElementById('going').style.opacity = '0';
+    	document.getElementById('not_going').style.opacity = '1';
+}
+
+
+function going_click(){
+		document.getElementById('maybe').style.opacity = '0';    
+    	document.getElementById('going').style.opacity = '1';
+    	document.getElementById('not_going').style.opacity = '0';
+}
+function maybe_click(){
+
+		document.getElementById('maybe').style.opacity = '1';    
+    	document.getElementById('going').style.opacity = '0';
+    	document.getElementById('not_going').style.opacity = '0';
+}
 
 function findGetParameter(parameterName) {
     var result = null,

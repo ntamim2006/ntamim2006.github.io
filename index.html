@@ -27,19 +27,21 @@
 	</script>
 	<script src="script.js"></script>
     </head>
+
     <body style="margin: 0">
         <form action="form1" class="main-artboard" method="post" name="form1">
             <div style="width: 320px; height: 100%; position:relative; margin:auto;">
-                <img class="rsvptabnot" src="./img/main artboardrsvptabnot@2x.png"/>
-                <img class="rsvp-tab-maybe" src="./img/main artboardrsvptab maybe@2x.png"/>
-                <img class="rsvptabcoming" src="./img/main artboardrsvptabcoming@2x.png"/>
-                <div class="copy">
+                <img id="not_going" class="rsvptabnot" src="./img/main artboardrsvptabnot@2x.png"/>
+                <img id="maybe" class="rsvp-tab-maybe" src="./img/main artboardrsvptab maybe@2x.png"/>
+                <img id="going" class="rsvptabcoming" src="./img/main artboardrsvptabcoming@2x.png"/>
+               
+                <div class="copy" onclick="going_click()">
                     מגיע
                 </div>
-                <div class="label1">
+                <div  class="label1" onclick="maybe_click()">
                     אולי
                 </div>
-                <div class="label2">
+                <div class="label2" onclick="not_going_click()">
                     לא מגיע
                 </div>
                 <div class="label3">
@@ -52,19 +54,27 @@
                     <br/>
                     <br/>
                 </div>
+
+
                 <img class="flower-png" src="./img/main artboardflower png@2x.png"/>
                 <div class="label4" >
                     אדר ונדב
                     <br/>
                     מתחתנים 
                 </div>
+
+
                 <img class="how-many-tab" src="./img/main artboardhow manytab@2x.png"/>
                 <input class="text2" name="text2" placeholder="בחר מספר נפשות"/>
 				
+
+
                 <a href="#" onclick="document.getElementsByName('form1')[0].submit();">
                     <img class="submit-bottun" src="./img/main artboardsubmit bottun@2x.png"/>
                 </a>
 				
+
+
                 <div class="label5">
                     :אנא אשרו הגעתכם
                     <br/>

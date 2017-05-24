@@ -1,9 +1,11 @@
 ﻿var latlng="";
 var event_state="";
 var event_numofguest;
+var ifgoing = "going";
+var URLParams = "";
 document.addEventListener("DOMContentLoaded", function(){
 	
-	var URLParams = {
+	 URLParams = {
 		event: findGetParameter("event"),
 		guest: findGetParameter("guest")
 	};
@@ -103,6 +105,7 @@ function not_going_click(){
 		document.getElementById('maybe').style.opacity = '0';    
     	document.getElementById('going').style.opacity = '0';
     	document.getElementById('not_going').style.opacity = '1';
+    	ifgoing = "not_going";
 }
 
 
@@ -110,12 +113,18 @@ function going_click(){
 		document.getElementById('maybe').style.opacity = '0';    
     	document.getElementById('going').style.opacity = '1';
     	document.getElementById('not_going').style.opacity = '0';
+    	ifgoing = "going";
 }
 function maybe_click(){
 
 		document.getElementById('maybe').style.opacity = '1';    
     	document.getElementById('going').style.opacity = '0';
     	document.getElementById('not_going').style.opacity = '0';
+    	ifgoing = "maybe";
+}
+function submit(){
+			database.ref('/users/' + URLParams.event + '/Invitations/sent_contacts/'+URLParams.guest+'/arrive_state').set(ifgoing);
+			
 }
 
 function findGetParameter(parameterName) {

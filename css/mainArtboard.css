@@ -214,6 +214,17 @@ div {
   margin              : 0;
   left                : 71px;
 }
+
+.selector{
+  background:rgba(255,255,255, 0.3);
+  top                 : 385px;
+  height              : 40px;
+  width               : 238px;
+  position            : absolute;
+  margin              : 0;
+  left                : 41px;
+}
+
 .main-artboard .footericons .waze-o {
   background          : rgba(255, 255, 255, 0.0);
   position            : relative;
@@ -235,4 +246,5 @@ div {
   margin              : 0 0 0 20px;
   width               : 48px;
 }
+
 

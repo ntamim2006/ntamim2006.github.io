@@ -124,7 +124,7 @@ function maybe_click(){
 }
 function submit(){
 			database.ref('/users/' + URLParams.event + '/Invitations/sent_contacts/'+URLParams.guest+'/arrive_state').set(ifgoing);
-			
+			window.location.href = 'thankyouartboard.html';
 }
 
 function findGetParameter(parameterName) {

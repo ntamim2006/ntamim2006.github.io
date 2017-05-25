@@ -236,3 +236,19 @@ div {
   width               : 48px;
 }
 
+select {
+   -webkit-appearance: none; 
+   -moz-appearance: none;
+   appearance: none;    
+   width: 343px;
+   height: 50px;
+   background: white;
+	padding: 10px;
+   border: none;
+   background-color: white;
+   background-image: url('https://anima-uploads.s3.amazonaws.com/579e85495f622300092a7d24/5921df3f13a7293e691cde00/5926859d51354b000dfbc5ea/img/iphone%207selectbg.svg');  
+   font-family: 'Rubik',Helvetica,Arial,serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14.0px;
+}

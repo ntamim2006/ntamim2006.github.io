@@ -239,11 +239,15 @@ div {
 select {
    -webkit-appearance: none; 
    -moz-appearance: none;
-   appearance: none;    
-   width: 343px;
-   height: 50px;
+   appearance: none; 
+	top                 : 385px;
+   width: 238px;
+   height: 40px;
    background: white;
 	padding: 10px;
+	position            : absolute;
+  margin              : 0;
+  left                : 41px
    border: none;
    background-color: white;
    background-image: url('https://anima-uploads.s3.amazonaws.com/579e85495f622300092a7d24/5921df3f13a7293e691cde00/5926859d51354b000dfbc5ea/img/iphone%207selectbg.svg');  

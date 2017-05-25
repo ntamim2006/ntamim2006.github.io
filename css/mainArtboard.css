@@ -249,7 +249,9 @@ select {
         padding: 10px;
    border: none;
    background-color: white;
-
+position: absolute;
+	left: 41px;
+	
    background-size: 238px 40px;
 	background-image: url('https://anima-uploads.s3.amazonaws.com/579e85495f622300092a7d24/5921df3f13a7293e691cde00/5926859d51354b000dfbc5ea/img/iphone%207selectbg.svg');
    font-family: 'Rubik',Helvetica,Arial,serif;

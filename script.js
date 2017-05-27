@@ -15,15 +15,15 @@ document.addEventListener("DOMContentLoaded", function(){
 		event_state = event2.arrive_state;
 		event_numofguest = event2.num_of_guests;
 		if(event2.arrive_state == "not_going"){
-// 		alert(event_state +" "+event_numofguest);
-		not_going_click();
+			not_going_click();
 		}else if(event2.arrive_state == "going"){
 			going_click();
-// 		alert("going");
 		}else{
 			maybe_click();
-// 		alert("maybe");
 		}
+		var element = document.getElementById('guests');
+    	element.value = event_numofguest;
+		
 		var htmlData2 = {
 			event_arrive_state: event2.arrive_state,
 			event_numofguest: event2.num_of_guests,
@@ -43,7 +43,6 @@ document.addEventListener("DOMContentLoaded", function(){
 			//event_time: "תאריך החתונה: " + event.date ,
 			event_title: event.name,
 			event_place: event.place,
-			//dsfsf
 		};
 		
 		
@@ -126,6 +125,9 @@ function maybe_click(){
 }
 function submit(){
 			database.ref('/users/' + URLParams.event + '/Invitations/sent_contacts/'+URLParams.guest+'/arrive_state').set(ifgoing);
+			var e = document.getElementById("guests");
+			var strUser = e.options[e.selectedIndex].value;
+			database.ref('/users/' + URLParams.event + '/Invitations/sent_contacts/'+URLParams.guest+'/num_of_guests').set(strUser);
 			window.location.href = 'thankyouartboard.html';
 }
 

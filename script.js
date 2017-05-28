@@ -1,4 +1,4 @@
-var latlng="";
+﻿var latlng="";
 var event_state="";
 var event_numofguest;
 var ifgoing = "going";
@@ -66,8 +66,21 @@ document.addEventListener("DOMContentLoaded", function(){
                 s.src = ('https:' == window.location.protocol ? 'https' : 'http')+'://addtocalendar.com/atc/1.5/atc.min.js';
                 var h = d[g]('body')[0];h.appendChild(s); };
 		});
+	
+		
+
+		
+	
 		
 	});
+	
+	
+	
+	
+});
+
+
+
 
 function myNavFunc(){
     // If it's an iPhone..

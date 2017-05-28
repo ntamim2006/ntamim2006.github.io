@@ -112,10 +112,6 @@ function not_going_click(){
 		var element = document.getElementById('guests');
 		element.value = "0";
 		 element.style.visibility = 'hidden';
-
-		// element.value ='0';
-		// element.disabled = "true";
-
 }
 
 
@@ -136,9 +132,8 @@ function maybe_click(){
     	ifgoing = "maybe";
 		var element = document.getElementById('guests');
 		element.style.visibility = 'visible';
-			// element.disabled = "false";
-
 }
+
 function submit(){
 			database.ref('/users/' + URLParams.event + '/Invitations/sent_contacts/'+URLParams.guest+'/arrive_state').set(ifgoing);
 			if(ifgoing == "not_going"){

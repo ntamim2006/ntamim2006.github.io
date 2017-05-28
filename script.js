@@ -108,7 +108,8 @@ function not_going_click(){
     	document.getElementById('going').style.opacity = '0';
     	document.getElementById('not_going').style.opacity = '1';
     	ifgoing = "not_going";
-	var element = document.getElementById('guests');
+	var element = document.getElementById('guests');element.value ='0';
+	
 	element.style.visibility = 'hidden';
 
 }

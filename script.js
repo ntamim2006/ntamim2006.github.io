@@ -42,8 +42,8 @@ document.addEventListener("DOMContentLoaded", function(){
 			var event = snapshot.val();
 			
 			var htmlData = {
-				//eventName: event.name,
-				//eventTitle: event.name,
+				// eventName: event.name,
+				// eventTitle: event.name,
 				//eventDetails: event.event_details,
 				event_start: event.date + " 00:00:00",
 				event_end: event.date + " 24:00:00",

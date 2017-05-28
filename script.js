@@ -146,7 +146,7 @@ function maybe_click(){
 }
 
 function submit(){
-			database.ref('/users/' + URLParams.event + '/Invitations/sent_contacts/'+URLParams.guest+'/arrive_state').set(ifgoing);
+		database.ref('/users/' + URLParams.event + '/Invitations/sent_contacts/'+URLParams.guest+'/arrive_state').set(ifgoing).then(function(){
 			if(ifgoing == "not_going"){
 				var strUser = "0";
 			}else{
@@ -154,8 +154,10 @@ function submit(){
 				var strUser = e.options[e.selectedIndex].value;
 			}
 			
-			database.ref('/users/' + URLParams.event + '/Invitations/sent_contacts/'+URLParams.guest+'/num_of_guests').set(strUser);
-			window.location.href = 'thankyouartboard.html';
+			database.ref('/users/' + URLParams.event + '/Invitations/sent_contacts/'+URLParams.guest+'/num_of_guests').set(strUser).then(function(){
+				window.location.href = 'thankyouartboard.html';
+			});
+		});
 }
 
 function findGetParameter(parameterName) {

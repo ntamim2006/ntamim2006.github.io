@@ -75,6 +75,23 @@ document.addEventListener("DOMContentLoaded", function(){
 	});
 	
 	
+	//document.querySelector("input[type=submit]").addEventListener("click", function (){
+		//if(document.querySelector("input[name='attending']:checked") && document.querySelector("select").value){
+		//	var attend = document.querySelector("input[name='attending']:checked").value;
+//			var numOfPeoples = document.querySelector("select").value;
+			
+		//	database.ref('/users/' + URLParams.event + '/Invitations/sent_contacts/'+URLParams.guest+'/num_of_guests').set(numOfPeoples);
+		//	database.ref('/users/' + URLParams.event + '/Invitations/sent_contacts/'+URLParams.guest+'/arrive_state').set(attend);
+		//				alert("תודה רבה, תשובתך נשלחה");
+
+			
+		//}else{
+		//	alert("נא לסמן האם ברצונך להגיע, ומספר נפשות");
+		//}
+		
+		
+	//});
+	
 	
 	
 });

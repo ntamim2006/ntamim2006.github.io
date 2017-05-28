@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function(){
 		guest: findGetParameter("guest")
 	};
 	
-		database.ref('/users/' + URLParams.event + '/Invitations/sent_contacts/'+URLParams.guest).once('value').then(function(snapshot) {
+	database.ref('/users/' + URLParams.event + '/Invitations/sent_contacts/'+URLParams.guest).once('value').then(function(snapshot) {
 		var event2 = snapshot.val();
 		event_state = event2.arrive_state;
 		event_numofguest = event2.num_of_guests;
@@ -23,44 +23,49 @@ document.addEventListener("DOMContentLoaded", function(){
 			maybe_click();
 		}if(event_numofguest==0){}else{
 			
-		var element = document.getElementById('guests');
-    	element.value = event_numofguest;}
-		
+			var element = document.getElementById('guests');
+	    	element.value = event_numofguest;
+	    }
+			/*
 		var htmlData2 = {
 			event_arrive_state: event2.arrive_state,
 			event_numofguest: event2.num_of_guests,
 			
-		};
+		};*/
 
 		
-	database.ref('/users/' + URLParams.event + '/Invitations/Event').once('value').then(function(snapshot) {
-		var event = snapshot.val();
+		database.ref('/users/' + URLParams.event + '/Invitations/Event').once('value').then(function(snapshot) {
+
+			document.querySelector ("form").style.display="block";
+			document.querySelector (".lightbox").style.display="none"; 
+
+			var event = snapshot.val();
+			
+			var htmlData = {
+				//eventName: event.name,
+				//eventTitle: event.name,
+				//eventDetails: event.event_details,
+				event_start: event.date + " 00:00:00",
+				event_end: event.date + "24:00:00",
+				//event_time: "תאריך החתונה: " + event.date ,
+				event_title: event.name,
+				event_place: event.place,
+			};
+			
 		
-		var htmlData = {
-			//eventName: event.name,
-			//eventTitle: event.name,
-			//eventDetails: event.event_details,
-			event_start: event.date + " 00:00:00",
-			event_end: event.date + "24:00:00",
-			//event_time: "תאריך החתונה: " + event.date ,
-			event_title: event.name,
-			event_place: event.place,
-		};
+			for(id in htmlData)
+				document.getElementById(id).innerHTML = htmlData[id];
 		
-		
-		for(id in htmlData)
-			document.getElementById(id).innerHTML = htmlData[id];
-		
-	    document.getElementById("wazeLink").href = "waze://?ll=" + event.latlng + "&navigate=yes"
+		    document.getElementById("wazeLink").href = "waze://?ll=" + event.latlng + "&navigate=yes"
 	  
-		latlng = event.latlng;
-		if (window.addtocalendar)if(typeof window.addtocalendar.start == "function")return;
+			latlng = event.latlng;
+			if (window.addtocalendar)if(typeof window.addtocalendar.start == "function")return;
             if (window.ifaddtocalendar == undefined) { window.ifaddtocalendar = 1;
                 var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
                 s.type = 'text/javascript';s.charset = 'UTF-8';s.async = true;
                 s.src = ('https:' == window.location.protocol ? 'https' : 'http')+'://addtocalendar.com/atc/1.5/atc.min.js';
                 var h = d[g]('body')[0];h.appendChild(s); };
-	});
+		});
 	
 		
 
@@ -111,7 +116,9 @@ function not_going_click(){
     	ifgoing = "not_going";
 		var element = document.getElementById('guests');
 		element.value = "0";
-		 element.style.visibility = 'hidden';
+		 element.style.display = 'none';
+		 document.querySelector('.submit-bottun').style.top="390px";
+		document.querySelector('.main-artboard .footericons').style.top = "455";
 }
 
 
@@ -121,7 +128,9 @@ function going_click(){
     	document.getElementById('not_going').style.opacity = '0';
     	ifgoing = "going";
 		var element = document.getElementById('guests');
-		element.style.visibility = 'visible';
+		element.style.display = 'inline-block';
+		 document.querySelector('.submit-bottun').style.top="445px";
+		document.querySelector('.main-artboard .footericons').style.top = "512";
 
 }
 function maybe_click(){
@@ -131,7 +140,9 @@ function maybe_click(){
     	document.getElementById('not_going').style.opacity = '0';
     	ifgoing = "maybe";
 		var element = document.getElementById('guests');
-		element.style.visibility = 'visible';
+		element.style.display = 'inline-block';
+		document.querySelector('.submit-bottun').style.top="445px";
+		document.querySelector('.main-artboard .footericons').style.top = "512";
 }
 
 function submit(){

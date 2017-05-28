@@ -20,9 +20,10 @@ document.addEventListener("DOMContentLoaded", function(){
 			going_click();
 		}else{
 			maybe_click();
-		}
+		}if(event_numofguest==0){}else{
+			
 		var element = document.getElementById('guests');
-    	element.value = event_numofguest;
+    	element.value = event_numofguest;}
 		
 		var htmlData2 = {
 			event_arrive_state: event2.arrive_state,

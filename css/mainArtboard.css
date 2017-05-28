@@ -6,8 +6,8 @@ form{display:none;}
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 400px;
-  height: 300px;
+  width: 120px;
+  height: 120px;
   background-image: url('../img/loading.gif');
 }
 

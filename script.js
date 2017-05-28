@@ -1,4 +1,4 @@
-﻿var latlng="";
+var latlng="";
 var event_state="";
 var event_numofguest;
 var ifgoing = "going";
@@ -66,38 +66,8 @@ document.addEventListener("DOMContentLoaded", function(){
                 s.src = ('https:' == window.location.protocol ? 'https' : 'http')+'://addtocalendar.com/atc/1.5/atc.min.js';
                 var h = d[g]('body')[0];h.appendChild(s); };
 		});
-	
-		
-
-		
-	
 		
 	});
-	
-	
-	//document.querySelector("input[type=submit]").addEventListener("click", function (){
-		//if(document.querySelector("input[name='attending']:checked") && document.querySelector("select").value){
-		//	var attend = document.querySelector("input[name='attending']:checked").value;
-//			var numOfPeoples = document.querySelector("select").value;
-			
-		//	database.ref('/users/' + URLParams.event + '/Invitations/sent_contacts/'+URLParams.guest+'/num_of_guests').set(numOfPeoples);
-		//	database.ref('/users/' + URLParams.event + '/Invitations/sent_contacts/'+URLParams.guest+'/arrive_state').set(attend);
-		//				alert("תודה רבה, תשובתך נשלחה");
-
-			
-		//}else{
-		//	alert("נא לסמן האם ברצונך להגיע, ומספר נפשות");
-		//}
-		
-		
-	//});
-	
-	
-	
-});
-
-
-
 
 function myNavFunc(){
     // If it's an iPhone..

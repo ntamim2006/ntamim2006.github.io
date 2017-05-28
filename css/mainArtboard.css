@@ -81,6 +81,7 @@ div {
 .main-artboard .label1 {
   background          : rgba(255, 255, 255, 0.0);
   top                 : 337px;
+  
   height              : auto;
   width               : auto;
   position            : absolute;

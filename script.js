@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function(){
 			not_going_click();
 		}else if(event2.arrive_state == "going"){
 			going_click();
-		}else{
+		}else if (event2.arrive_state == "maybe"){
 			maybe_click();
 		}if(event_numofguest==0){}else{
 			

@@ -145,7 +145,7 @@ function maybe_click(){
 		document.querySelector('.main-artboard .footericons').style.top = "512";
 }
 
-function submit(){
+function my_submit(){
 		database.ref('/users/' + URLParams.event + '/Invitations/sent_contacts/'+URLParams.guest+'/arrive_state').set(ifgoing).then(function(){
 			if(ifgoing == "not_going"){
 				var strUser = "0";

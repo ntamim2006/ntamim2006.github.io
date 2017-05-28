@@ -24,7 +24,7 @@ div {
   flex-direction      : row;
   align-items         : center;
   background          : rgba(255, 255, 255, 0.0);
-  top                 : 55%;
+  top                 : 80%;
   height              : 46px;
   width               : auto;
   position            : absolute;
@@ -55,7 +55,7 @@ div {
 .thank-you-artboard .background {
   background          : rgba(255, 255, 255, 0.0);
   top                 : 0px;
-  height              : 50%;
+  height              : 70%;
   width               : 500px;
   position            : absolute;
   margin              : 0;
@@ -63,7 +63,7 @@ div {
 }
 .thank-you-artboard .label1 {
   background          : rgba(255, 255, 255, 0.0);
-  top                 : 28%;
+  top                 : 35%;
   height              : auto;
   width               : auto;
   position            : absolute;

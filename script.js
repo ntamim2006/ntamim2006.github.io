@@ -3,6 +3,7 @@ var event_state="";
 var event_numofguest;
 var ifgoing = "going";
 var URLParams = "";
+
 document.addEventListener("DOMContentLoaded", function(){
 	
 	 URLParams = {
@@ -108,9 +109,12 @@ function not_going_click(){
     	document.getElementById('going').style.opacity = '0';
     	document.getElementById('not_going').style.opacity = '1';
     	ifgoing = "not_going";
-	var element = document.getElementById('guests');element.value ='0';
-	
-	element.disabled = "true";
+		var element = document.getElementById('guests');
+		element.value = "0";
+		 element.style.visibility = 'hidden';
+
+		// element.value ='0';
+		// element.disabled = "true";
 
 }
 
@@ -121,7 +125,8 @@ function going_click(){
     	document.getElementById('not_going').style.opacity = '0';
     	ifgoing = "going";
 		var element = document.getElementById('guests');
-	element.style.visibility = 'visible';
+		element.style.visibility = 'visible';
+
 }
 function maybe_click(){
 
@@ -130,12 +135,19 @@ function maybe_click(){
     	document.getElementById('not_going').style.opacity = '0';
     	ifgoing = "maybe";
 		var element = document.getElementById('guests');
-	element.style.visibility = 'visible';
+		element.style.visibility = 'visible';
+			// element.disabled = "false";
+
 }
 function submit(){
 			database.ref('/users/' + URLParams.event + '/Invitations/sent_contacts/'+URLParams.guest+'/arrive_state').set(ifgoing);
-			var e = document.getElementById("guests");
-			var strUser = e.options[e.selectedIndex].value;
+			if(ifgoing == "not_going"){
+				var strUser = "0";
+			}else{
+				var e = document.getElementById("guests");
+				var strUser = e.options[e.selectedIndex].value;
+			}
+			
 			database.ref('/users/' + URLParams.event + '/Invitations/sent_contacts/'+URLParams.guest+'/num_of_guests').set(strUser);
 			window.location.href = 'thankyouartboard.html';
 }

@@ -108,6 +108,9 @@ function not_going_click(){
     	document.getElementById('going').style.opacity = '0';
     	document.getElementById('not_going').style.opacity = '1';
     	ifgoing = "not_going";
+	var element = document.getElementById('guests');
+	element.style.visibility = 'hidden';
+
 }
 
 
@@ -116,6 +119,8 @@ function going_click(){
     	document.getElementById('going').style.opacity = '1';
     	document.getElementById('not_going').style.opacity = '0';
     	ifgoing = "going";
+		var element = document.getElementById('guests');
+	element.style.visibility = 'visible';
 }
 function maybe_click(){
 
@@ -123,6 +128,8 @@ function maybe_click(){
     	document.getElementById('going').style.opacity = '0';
     	document.getElementById('not_going').style.opacity = '0';
     	ifgoing = "maybe";
+		var element = document.getElementById('guests');
+	element.style.visibility = 'visible';
 }
 function submit(){
 			database.ref('/users/' + URLParams.event + '/Invitations/sent_contacts/'+URLParams.guest+'/arrive_state').set(ifgoing);

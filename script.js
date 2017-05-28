@@ -110,7 +110,7 @@ function not_going_click(){
     	ifgoing = "not_going";
 	var element = document.getElementById('guests');element.value ='0';
 	
-	element.style.visibility = 'hidden';
+	element.disabled = "true";
 
 }
 

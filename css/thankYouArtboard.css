@@ -5,7 +5,7 @@
   width               : 100%;
   min-width           : 320px;
   height              : 100%;
-  min-height          : 568px;
+  /*min-height          : 568px;*/
   position            : relative;
   overflow            : hidden;
   margin              : 0px;
@@ -24,7 +24,7 @@ div {
   flex-direction      : row;
   align-items         : center;
   background          : rgba(255, 255, 255, 0.0);
-  top                 : 457px;
+  top                 : 55%;
   height              : 46px;
   width               : auto;
   position            : absolute;
@@ -55,7 +55,7 @@ div {
 .thank-you-artboard .background {
   background          : rgba(255, 255, 255, 0.0);
   top                 : 0px;
-  height              : 434px;
+  height              : 50%;
   width               : 500px;
   position            : absolute;
   margin              : 0;
@@ -63,7 +63,7 @@ div {
 }
 .thank-you-artboard .label1 {
   background          : rgba(255, 255, 255, 0.0);
-  top                 : 266px;
+  top                 : 28%;
   height              : auto;
   width               : auto;
   position            : absolute;

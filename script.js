@@ -149,6 +149,13 @@ function my_submit(){
 		database.ref('/users/' + URLParams.event + '/Invitations/sent_contacts/'+URLParams.guest+'/arrive_state').set(ifgoing).then(function(){
 			if(ifgoing == "not_going"){
 				var strUser = "0";
+			}else if(ifgoing == "going"){
+				var e = document.getElementById("guests");
+				if(e.options[e.selectedIndex].value == "0"){
+					alert("אנא בחר מספר אנשים שמגיעים");
+				}else{
+					var strUser = e.options[e.selectedIndex].value;
+				}
 			}else{
 				var e = document.getElementById("guests");
 				var strUser = e.options[e.selectedIndex].value;

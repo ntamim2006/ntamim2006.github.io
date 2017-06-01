@@ -4,6 +4,8 @@
         <meta charset="utf-8"/>
         <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0" name="viewport"/>
         <link href="./css/thankYouArtboard.css" rel="stylesheet" type="text/css"/>
+            <link href="http://addtocalendar.com/atc/1.5/atc-style-blue.css" rel="stylesheet" type="text/css">
+
                 <script src="thank_you_script.js"></script>
 
         <meta content="Launchpad by Anima" name="author">
@@ -16,7 +18,20 @@
                 <div class="footericons">
                     <img class="waze-o" src="./img/thank you artboardwaze o@2x.png" onclick="myNavFuncWaze()"/>
                     <img class="map-o" src="./img/thank you artboardmap o@2x.png" onclick="myNavFunc()"/>
-                    <img class="calander-o" src="./img/thank you artboardcalander o@2x.png"/>
+                        
+                    <span class="addtocalendar atc-style-link ">
+                        <a class="atcb-link"><img class="calander-o" src="./img/main artboardcalander o@2x.png" /></a>
+                        <var class="atc_event">
+                            <var class="atc_date_start" id="event_start">11.6.2017 18:30:00</var>
+                            <var class="atc_date_end" id="event_end">11.6.2017 24:00:00</var>
+                            <var class="atc_timezone">Asia/Jerusalem</var>
+                            <var class="atc_title" id="event_title">החתונה של נדב ואדר</var>
+                            <var class="atc_description"></var>
+                            <var class="atc_location" id="event_place">שמיים כחולים, רחובות</var>
+                            <var class="atc_organizer"></var>
+                            <var class="atc_organizer_email">a@a.a</var>
+                        </var>
+                    </span>
                 </div>
                 <img class="background" src="./img/thank you artboardbackground@2x.png"/>
                 <div class="label1">
@@ -24,7 +39,6 @@
                 </div>
             </div>
         </div>
-        <script async="" defer="" src="launchpad-js/launchpad-banner.js">
         </script>
     </body>
 </html>

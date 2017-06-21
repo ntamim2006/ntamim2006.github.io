@@ -7,7 +7,7 @@
   height              : 92%;
   /*min-height          : 568px;*/
   position            : relative;
-  /*overflow            : hidden;*/
+  overflow-x            : hidden;
   margin              : 0px;
   background          : rgba(255, 255, 255, 1.0);
 }

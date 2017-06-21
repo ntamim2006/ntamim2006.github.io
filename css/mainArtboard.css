@@ -142,12 +142,12 @@ div {
 }
 .main-artboard .label4 {
   background          : rgba(255, 255, 255, 0.0);
-  top                 : 87px;
+  /*top                 : 87px;
   height              : auto;
   width               : auto;
   position            : absolute;
   margin              : 0;
-  left                : 120px;
+  left                : 120px;*/
   font-family         : "Rubik", Helvetica, Arial, serif;
   font-weight         : 400;
   font-style          : normal;
@@ -155,6 +155,13 @@ div {
   color               : rgba(81, 81, 81, 1.0);
   letter-spacing      : 1.56px;
   line-height         : 22.0px;
+
+
+  margin: auto;
+  width: 119px;
+  text-align: center;
+  position: relative;
+  top: 74px;
 }
 .main-artboard .how-many-tab {
   background          : rgba(255, 255, 255, 0.0);

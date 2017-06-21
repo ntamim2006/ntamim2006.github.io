@@ -290,3 +290,11 @@ select {
    font-style: normal;
    font-size: 14.0px;
 }
+
+
+footer{
+  text-align: center;
+}
+footer img{
+  max-width: 140px
+}

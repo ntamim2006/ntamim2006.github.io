@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function(){
 		guest: findGetParameter("guest")
 	};
 	
-	database.ref('/users/' + URLParams.event + '/Invitations/sent_contacts/'+URLParams.guest).once('value').then(function(snapshot) {
+	database.ref('/users/' + URLParams.event + '/Invitations/sent_contacts/'+URLParams.guest).once('value').then(function (snapshot) {window.setTimeout(function() {
 		var event2 = snapshot.val();
 		event_state = event2.arrive_state;
 		event_numofguest = event2.num_of_guests;
@@ -38,6 +38,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
 			document.querySelector ("form").style.display="block";
 			document.querySelector (".lightbox").style.display="none"; 
+			document.querySelector ("footer").style.position="static"; 
 
 			var event = snapshot.val();
 			
@@ -77,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function(){
 		
 	
 		
-	});
+	}, 10000)});
 	
 	
 	//document.querySelector("input[type=submit]").addEventListener("click", function (){

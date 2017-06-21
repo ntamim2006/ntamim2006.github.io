@@ -161,7 +161,9 @@ div {
   width: 119px;
   text-align: center;
   position: relative;
-  top: 74px;
+  top: 108px;
+  transform: translate(0, -50%);
+  right: 5px;
 }
 .main-artboard .how-many-tab {
   background          : rgba(255, 255, 255, 0.0);

@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function(){
 		
 	
 		
-	}, 10000)});
+	}, 1000)});
 	
 	
 	//document.querySelector("input[type=submit]").addEventListener("click", function (){

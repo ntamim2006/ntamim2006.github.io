@@ -4,10 +4,10 @@
 .thank-you-artboard {
   width               : 100%;
   min-width           : 320px;
-  height              : 95%;
+  height              : 92%;
   /*min-height          : 568px;*/
   position            : relative;
-  overflow            : hidden;
+  /*overflow            : hidden;*/
   margin              : 0px;
   background          : rgba(255, 255, 255, 1.0);
 }

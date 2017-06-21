@@ -78,3 +78,33 @@ div {
   letter-spacing      : 1.1px;
   line-height         : 32.0px;
 }
+
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 30;
+    width: 50px;
+    background-color: white;
+    padding: 5px;
+    text-align: center;
+    direction: rtl;
+    box-sizing: border-box;
+}
+
+.popup::after {
+    content: ' ';
+    width: 36;
+    height: 36;
+    background-color: white;
+    display: block;
+    position: absolute;
+    transform: rotate(45deg);
+    bottom: -18px;
+    z-index: -1;
+    left: 7px;
+}
+
+.popup img {
+    max-width: 100%;
+}

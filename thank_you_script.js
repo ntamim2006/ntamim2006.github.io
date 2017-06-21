@@ -48,6 +48,7 @@ document.addEventListener("DOMContentLoaded", function(){
 		
 		     document.getElementById("wazeLink").href = "waze://?ll=" + event.latlng + "&navigate=yes"
 	  
+	  		document.querySelector(".popup").style.top=0;
 
 		 	latlng = event.latlng;
 		 	if (window.addtocalendar)if(typeof window.addtocalendar.start == "function")return;

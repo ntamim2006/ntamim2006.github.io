@@ -82,7 +82,6 @@ div {
 
 .popup {
     position: fixed;
-    top: 0;
     left: 30;
     width: 50px;
     background-color: white;
@@ -90,6 +89,10 @@ div {
     text-align: center;
     direction: rtl;
     box-sizing: border-box;
+
+    transition: all .5s;
+    top: -110;
+    font-size: 14px;
 }
 
 .popup::after {

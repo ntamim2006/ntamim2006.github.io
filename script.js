@@ -48,12 +48,13 @@ document.addEventListener("DOMContentLoaded", function(){
 				event_start: event.date + " 18:30:00",
 				event_end: event.date + " 24:00:00",
 				//event_time: "תאריך החתונה: " + event.date ,
-				event_title: event.name,
-				event_place: event.place,
+				event_title: "החתונה של " + event.name,
+		 		event_place: event.place + ", " + event.city,
 				names: event.name,
 				place: event.place,
 				city: event.city,
-				date: event.date
+				date: event.date,
+				page_title: event.name + " מתחתנים!"
 			};
 			
 		
@@ -166,7 +167,7 @@ function my_submit(){
 			}
 			
 			database.ref('/users/' + URLParams.event + '/Invitations/sent_contacts/'+URLParams.guest+'/num_of_guests').set(strUser).then(function(){
-				window.location.href = 'thankyouartboard.html';
+				window.location.href = 'thankyouartboard.html?event='+URLParams.event+'&guest=' + URLParams.guest;
 			});
 		});
 }

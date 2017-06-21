@@ -2,6 +2,7 @@
     <head>
         <link href="./img/favicon.png" rel="shortcut icon"/>
         <meta charset="utf-8"/>
+        <title>תודה !</title>
         <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0" name="viewport"/>
         <link href="./css/thankYouArtboard.css" rel="stylesheet" type="text/css"/>
             <link href="https://addtocalendar.com/atc/1.5/atc-style-blue.css" rel="stylesheet" type="text/css">
@@ -10,24 +11,36 @@
 
         <meta content="Launchpad by Anima" name="author">
         </meta>
-
+        <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+        <script>
+            var config = {
+                apiKey: "AIzaSyAwB80M7gut7DWxTWNM96AdbTxoyvDopfg",
+                authDomain: "weddingcalc-ab3d4.firebaseapp.com",
+                databaseURL: "https://weddingcalc-ab3d4.firebaseio.com",
+                projectId: "weddingcalc-ab3d4",
+                storageBucket: "weddingcalc-ab3d4.appspot.com",
+                messagingSenderId: "731248230379"
+            };
+            firebase.initializeApp(config);
+            var database = firebase.database();
+        </script>
     </head>
     <body style="margin: 0">
         <div class="thank-you-artboard">
             <div style="width: 320px; height: 100%; position:relative; margin:auto;">
                 <div class="footericons">
-                    <img class="waze-o" src="./img/thank you artboardwaze o@2x.png" onclick="myNavFuncWaze()"/>
+                    <img class="waze-o" id="wazeLink" src="./img/thank you artboardwaze o@2x.png"/>
                     <img class="map-o" src="./img/thank you artboardmap o@2x.png" onclick="myNavFunc()"/>
                         
                     <span class="addtocalendar atc-style-link ">
                         <a class="atcb-link"><img class="calander-o" src="./img/main artboardcalander o@2x.png" /></a>
                         <var class="atc_event">
-                            <var class="atc_date_start" id="event_start">11.6.2017 18:30:00</var>
-                            <var class="atc_date_end" id="event_end">11.6.2017 24:00:00</var>
+                            <var class="atc_date_start" id="event_start"></var>
+                            <var class="atc_date_end" id="event_end"></var>
                             <var class="atc_timezone">Asia/Jerusalem</var>
-                            <var class="atc_title" id="event_title">החתונה של נדב ואדר</var>
+                            <var class="atc_title" id="event_title"></var>
                             <var class="atc_description"></var>
-                            <var class="atc_location" id="event_place">שמיים כחולים, רחובות</var>
+                            <var class="atc_location" id="event_place"></var>
                             <var class="atc_organizer"></var>
                             <var class="atc_organizer_email">a@a.a</var>
                         </var>

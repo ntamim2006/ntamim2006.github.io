@@ -5,74 +5,58 @@ var ifgoing = "going";
 var URLParams = "";
 
 
+function findGetParameter(parameterName) {
+    var result = null,
+        tmp = [];
+    location.search
+    .substr(1)
+        .split("&")
+        .forEach(function (item) {
+        tmp = item.split("=");
+        if (tmp[0] === parameterName) result = decodeURIComponent(tmp[1]);
+    });
+    return result;
+}
+
 document.addEventListener("DOMContentLoaded", function(){
-	if (window.addtocalendar)if(typeof window.addtocalendar.start == "function")return;
-            if (window.ifaddtocalendar == undefined) { window.ifaddtocalendar = 1;
-                var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
-                s.type = 'text/javascript';s.charset = 'UTF-8';s.async = true;
-                s.src = ('https:' == window.location.protocol ? 'https' : 'http')+'://addtocalendar.com/atc/1.5/atc.min.js';
-                var h = d[g]('body')[0];h.appendChild(s); };
-                
-// 	 URLParams = {
-// 		event: findGetParameter("event"),
-// 		guest: findGetParameter("guest")
-// 	};
 	
-// 	database.ref('/users/' + URLParams.event + '/Invitations/sent_contacts/'+URLParams.guest).once('value').then(function(snapshot) {
-// 		var event2 = snapshot.val();
-// 		event_state = event2.arrive_state;
-// 		event_numofguest = event2.num_of_guests;
-// 		if(event2.arrive_state == "not_going"){
-// 			not_going_click();
-// 		}else if(event2.arrive_state == "going"){
-// 			going_click();
-// 		}else if (event2.arrive_state == "maybe"){
-// 			maybe_click();
-// 		}if(event_numofguest==0){}else{
-			
-// 			var element = document.getElementById('guests');
-// 	    	element.value = event_numofguest;
-// 	    }
-			/*
-		var htmlData2 = {
-			event_arrive_state: event2.arrive_state,
-			event_numofguest: event2.num_of_guests,
-			
-		};*/
-
+                
+ 	 URLParams = {
+ 		event: findGetParameter("event"),
+ 		guest: findGetParameter("guest")
+ 	};
+	
 		
-		// database.ref('/users/' + URLParams.event + '/Invitations/Event').once('value').then(function(snapshot) {
+		 database.ref('/users/' + URLParams.event + '/Invitations/Event').once('value').then(function(snapshot) {
 
-		// 	document.querySelector ("form").style.display="block";
-		// 	document.querySelector (".lightbox").style.display="none"; 
-
-		// 	var event = snapshot.val();
+		 	var event = snapshot.val();
 			
-		// 	var htmlData = {
-		// 		// eventName: event.name,
-		// 		// eventTitle: event.name,
-		// 		//eventDetails: event.event_details,
-		// 		event_start: event.date + " 18:30:00",
-		// 		event_end: event.date + " 24:00:00",
-		// 		//event_time: "תאריך החתונה: " + event.date ,
-		// 		event_title: event.name,
-		// 		event_place: event.place,
-		// 	};
+		 	var htmlData = {
+		 		// eventName: event.name,
+		 		// eventTitle: event.name,
+		 		//eventDetails: event.event_details,
+		 		event_start: event.date + " 18:30:00",
+		 		event_end: event.date + " 24:00:00",
+		 		//event_time: "תאריך החתונה: " + event.date ,
+		 		event_title: "החתונה של " + event.name,
+		 		event_place: event.place + ", " + event.city,
+		 	};
 			
 		
-		// 	for(id in htmlData)
-		// 		document.getElementById(id).innerHTML = htmlData[id];
+		 	for(id in htmlData)
+		 		document.getElementById(id).innerHTML = htmlData[id];
 		
-		//     document.getElementById("wazeLink").href = "waze://?ll=" + event.latlng + "&navigate=yes"
+		     document.getElementById("wazeLink").href = "waze://?ll=" + event.latlng + "&navigate=yes"
 	  
-		// 	latlng = event.latlng;
-		// 	if (window.addtocalendar)if(typeof window.addtocalendar.start == "function")return;
-  //           if (window.ifaddtocalendar == undefined) { window.ifaddtocalendar = 1;
-  //               var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
-  //               s.type = 'text/javascript';s.charset = 'UTF-8';s.async = true;
-  //               s.src = ('https:' == window.location.protocol ? 'https' : 'http')+'://addtocalendar.com/atc/1.5/atc.min.js';
-  //               var h = d[g]('body')[0];h.appendChild(s); };
-		// });
+
+		 	latlng = event.latlng;
+		 	if (window.addtocalendar)if(typeof window.addtocalendar.start == "function")return;
+             if (window.ifaddtocalendar == undefined) { window.ifaddtocalendar = 1;
+                 var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
+                 s.type = 'text/javascript';s.charset = 'UTF-8';s.async = true;
+                 s.src = ('https:' == window.location.protocol ? 'https' : 'http')+'://addtocalendar.com/atc/1.5/atc.min.js';
+                 var h = d[g]('body')[0];h.appendChild(s); };
+		 });
 	
 		
 

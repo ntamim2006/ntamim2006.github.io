@@ -1,0 +1,137 @@
+<html dir="rtl">
+    <head>
+	    <link rel="icon" href="img/testring.png">
+
+        <link href="./img/favicon.png" rel="shortcut icon"/>
+        <meta charset="utf-8"/>
+        <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0" name="viewport"/>
+		<title id="page_title">אישורי הגעה</title>
+
+        <meta content="Launchpad by Anima" name="author">
+        </meta>
+			<link href="https://addtocalendar.com/atc/1.5/atc-style-blue.css" rel="stylesheet" type="text/css">
+
+			<script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+	<script>
+	    var config = {
+			apiKey: "AIzaSyAwB80M7gut7DWxTWNM96AdbTxoyvDopfg",
+			authDomain: "weddingcalc-ab3d4.firebaseapp.com",
+			databaseURL: "https://weddingcalc-ab3d4.firebaseio.com",
+			projectId: "weddingcalc-ab3d4",
+			storageBucket: "weddingcalc-ab3d4.appspot.com",
+			messagingSenderId: "731248230379"
+		};
+		firebase.initializeApp(config);
+		var database = firebase.database();
+	</script>
+	<script src="script.js"></script>
+            <link href="./css/mainArtboard.css" rel="stylesheet" type="text/css"/>
+
+    </head>
+
+    <body style="margin: 0">
+        <div class = "lightbox">
+            <div class="content">
+            </div>
+        </div>
+        <form action="#" class="main-artboard" method="post" name="form1">
+            <div style="width: 320px; height: 100%; position:relative; margin:auto;">
+                <img id="not_going" class="rsvptabnot" src="./img/main artboardrsvptabnot@2x.png"/>
+                <img id="maybe" class="rsvp-tab-maybe" src="./img/main artboardrsvptab maybe@2x.png"/>
+                <img id="going" class="rsvptabcoming" src="./img/main artboardrsvptabcoming@2x.png"/>
+               
+                <div class="copy" onclick="going_click()">
+                    מגיע
+                </div>
+                <div  class="label1" onclick="maybe_click()">
+                    אולי
+                </div>
+                <div class="label2" onclick="not_going_click()">
+                    לא מגיע
+                </div>
+                <div  class="label3">
+                    הנכם מוזמנים לחתונה של
+                    <span id="names"></span>
+                    
+                    שתתקיים באולמי “<span id="place"></span>” ב<span id="city"></span>
+                    <br/>
+                    בתאריך <span id="date"></span>
+                    <br/><br/>
+                    <!-- אנא אשרו הגעתכם: -->
+                </div>
+
+
+                <img class="flower-png" src="./img/main artboardflower png@2x.png"/>
+                <div class="label4" >
+                    <span id="eventName"></span>
+                    <br/>מתחתנים 
+                </div>
+
+
+           
+			
+                <select id="guests" name="amount" dir="rtl">
+                 <option value="0" selected disabled>בחר מספר נפשות</option>
+			     <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+
+                </select>
+	
+
+
+                <a href="#" onclick="my_submit()">
+                    <img class="submit-bottun" src="./img/main artboardsubmit bottun@2x.png"/>
+                </a>
+				
+
+
+                <div class="label5">
+                    אנא אשרו הגעתכם:
+                    <br/>
+                </div>
+				
+				
+				
+                <div class="footericons">
+					<a href="waze://?ll=&navigate=yes" title="נווט באמצעות Waze" id="wazeLink">
+                    <img class="waze-o"  src="./img/main artboardwaze o@2x.png"/>
+					</a>
+					<a title="נווט באמצעות גוגל מפות">
+                    <img class="map-o"  src="./img/main artboardmap o@2x.png" onclick="myNavFunc()"/>
+					</a>
+			<span class="addtocalendar atc-style-link ">
+				<a class="atcb-link"><img class="calander-o" src="./img/main artboardcalander o@2x.png"/></a>
+				<var class="atc_event">
+					<var class="atc_date_start" id="event_start"></var>
+					<var class="atc_date_end" id="event_end"></var>
+					<var class="atc_timezone">Asia/Jerusalem</var>
+					<var class="atc_title" id="event_title"></var>
+					<var class="atc_description"></var>
+					<var class="atc_location" id="event_place"></var>
+					<var class="atc_organizer"></var>
+					<var class="atc_organizer_email">a@a.a</var>
+				</var>
+			</span>
+                </div>
+            </div>
+        </form>
+        <footer>
+
+            <p>
+                נשלח באמצעות אפליקצית החתונות המובילה בישראל<br>
+                <img src="img/Logonew2.png">
+            </p>
+            <hr>
+            <small><a href='http://www.freepik.com/free-vector/watercolor-flowers-with-leaves-wreath-ornament_842226.htm'>Designed by Freepik</a></small>
+
+        </footer>
+    </body>
+</html>

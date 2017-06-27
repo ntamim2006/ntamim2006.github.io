@@ -15,11 +15,11 @@ document.addEventListener("DOMContentLoaded", function(){
 		var event2 = snapshot.val();
 		event_state = event2.arrive_state;
 		event_numofguest = event2.num_of_guests;
-		if(event2.arrive_state == 2){
+		if(event2.arrive_state == 3){
 			not_going_click();
 		}else if(event2.arrive_state == 1){
 			going_click();
-		}else if (event2.arrive_state == 3){
+		}else if (event2.arrive_state == 2){
 			maybe_click();
 		}
 
@@ -122,7 +122,7 @@ function not_going_click(){
 		document.getElementById('maybe').style.opacity = '0';    
     	document.getElementById('going').style.opacity = '0';
     	document.getElementById('not_going').style.opacity = '1';
-    	ifgoing = 2;
+    	ifgoing = 3;
 		var element = document.getElementById('guests');
 		element.value = "0";
 		 element.style.display = 'none';
@@ -147,7 +147,7 @@ function maybe_click(){
 		document.getElementById('maybe').style.opacity = '1';    
     	document.getElementById('going').style.opacity = '0';
     	document.getElementById('not_going').style.opacity = '0';
-    	ifgoing = 3;
+    	ifgoing = 2;
 		var element = document.getElementById('guests');
 		element.style.display = 'inline-block';
 		document.querySelector('.submit-bottun').style.top="445px";
@@ -156,7 +156,7 @@ function maybe_click(){
 
 function my_submit(){
 		database.ref('/users/' + URLParams.event + '/Invitations/sent_contacts/'+URLParams.guest+'/arrive_state').set(ifgoing).then(function(){
-			if(ifgoing == 2){
+			if(ifgoing == 3){
 				var strUser = "0";
 			}else if(ifgoing == 1){
 				var e = document.getElementById("guests");

@@ -1,7 +1,7 @@
 ﻿var latlng="";
 var event_state="";
 var event_numofguest;
-var ifgoing = 1;
+var ifgoing = 0;
 var URLParams = "";
 
 document.addEventListener("DOMContentLoaded", function(){
@@ -15,11 +15,11 @@ document.addEventListener("DOMContentLoaded", function(){
 		var event2 = snapshot.val();
 		event_state = event2.arrive_state;
 		event_numofguest = event2.num_of_guests;
-		if(event2.arrive_state == 3){
+		if(event2.arrive_state == 2){
 			not_going_click();
-		}else if(event2.arrive_state == 1){
+		}else if(event2.arrive_state == 0){
 			going_click();
-		}else if (event2.arrive_state == 2){
+		}else if (event2.arrive_state == 1){
 			maybe_click();
 		}
 
@@ -122,7 +122,7 @@ function not_going_click(){
 		document.getElementById('maybe').style.opacity = '0';    
     	document.getElementById('going').style.opacity = '0';
     	document.getElementById('not_going').style.opacity = '1';
-    	ifgoing = 3;
+    	ifgoing = 2;
 		var element = document.getElementById('guests');
 		element.value = "0";
 		 element.style.display = 'none';
@@ -135,7 +135,7 @@ function going_click(){
 		document.getElementById('maybe').style.opacity = '0';    
     	document.getElementById('going').style.opacity = '1';
     	document.getElementById('not_going').style.opacity = '0';
-    	ifgoing = 1;
+    	ifgoing = 0;
 		var element = document.getElementById('guests');
 		element.style.display = 'inline-block';
 		 document.querySelector('.submit-bottun').style.top="445px";
@@ -147,7 +147,7 @@ function maybe_click(){
 		document.getElementById('maybe').style.opacity = '1';    
     	document.getElementById('going').style.opacity = '0';
     	document.getElementById('not_going').style.opacity = '0';
-    	ifgoing = 2;
+    	ifgoing = 1;
 		var element = document.getElementById('guests');
 		element.style.display = 'inline-block';
 		document.querySelector('.submit-bottun').style.top="445px";
@@ -156,9 +156,9 @@ function maybe_click(){
 
 function my_submit(){
 		database.ref('/users/' + URLParams.event + '/Invitations/sent_contacts/'+URLParams.guest+'/arrive_state').set(ifgoing).then(function(){
-			if(ifgoing == 3){
+			if(ifgoing == 2){
 				var strUser = "0";
-			}else if(ifgoing == 1){
+			}else if(ifgoing == 0){
 				var e = document.getElementById("guests");
 				if(e.options[e.selectedIndex].value == "0"){
 					alert("אנא בחר מספר אנשים שמגיעים");
@@ -166,6 +166,7 @@ function my_submit(){
 					var strUser = e.options[e.selectedIndex].value;
 				}
 			}else{
+				
 				var e = document.getElementById("guests");
 				var strUser = e.options[e.selectedIndex].value;
 			}

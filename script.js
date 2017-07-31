@@ -172,7 +172,9 @@ function my_submit(){
 			}
 			
 			database.ref('/users/' + URLParams.event + '/Invitations/sent_contacts/'+URLParams.guest+'/num_of_guests').set(strUser).then(function(){
-				window.location.href = 'thankyouartboard.html?event='+URLParams.event+'&guest=' + URLParams.guest;
+			    database.ref('/users/' + URLParams.event + '/Invitations/sent_contacts/'+URLParams.guest+'/last_arrival_update').set(+new Date()).then(function(){
+				    window.location.href = 'thankyouartboard.html?event='+URLParams.event+'&guest=' + URLParams.guest;
+			    });
 			});
 		});
 }
